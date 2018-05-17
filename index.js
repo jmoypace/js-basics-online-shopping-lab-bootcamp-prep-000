@@ -68,22 +68,14 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   let totalnum=total()
-  //let ccnum=Math.floor(Math.random() * 100000000);
-   //ccnum=ccnum.toString()
   if(cardNumber===undefined){
     return "Sorry, we don't have a credit card on file for you."
   }
-// else if(cardNumber.length!==ccnum.length) {
-//   console.log("Sorry, we don't have a credit card on file for you.")
-// }
-else /*if(cardNumber.length===ccnum.length)*/{
-  //console.log(ccnum,cardNumber)
+
+else{
   setCart([])
   return `Your total cost is $${totalnum}, which will be charged to the card ${cardNumber}.`
 }
-// for(var k=0;k<cart.length;k++){
-// cart.pop()
-//}
 }
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
